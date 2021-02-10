@@ -1,0 +1,10 @@
+{
+  "name": "tabs shortcut",
+  "version": "1.0",
+  "description": "This will help you open several tabs at once.",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "page_action": {
+    "default_popup": "popup/popup.html"
+  },
+  "manifest_version": 2
+}
