@@ -1,10 +1,19 @@
 {
   "name": "tabs shortcut",
-  "version": "1.0",
+  "version": "0.1.0",
   "description": "This will help you open several tabs at once.",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
-  "page_action": {
-    "default_popup": "popup/popup.html"
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Spacebar",
+        "mac": "MacCtrl+Spacebar"
+      },
+      "description": "Opens popup.html"
+    }
   },
   "manifest_version": 2
 }
