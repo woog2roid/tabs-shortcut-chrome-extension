@@ -1,19 +1,27 @@
 {
   "name": "tabs shortcut",
   "version": "0.1.0",
-  "description": "This will help you open several tabs at once.",
-  "permissions": ["storage"],
+  "description": "This extension will help you open several tabs at once.",
+  "permissions": ["unlimitedStorage"],
+
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "./popup/popup.html"
   },
+  
+  "background": {
+    "scripts": ["./background/background.js"],
+    "persistent": false
+  },
+
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Spacebar",
-        "mac": "MacCtrl+Spacebar"
+        "default": "Ctrl + Shift + E",
+        "mac": "MacCtrl + Shift + E"
       },
       "description": "Opens popup.html"
     }
   },
+
   "manifest_version": 2
 }

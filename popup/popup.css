@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSans-Light.ttf") format("truetype");
+}
+
+body {
+    width:350px;
+    font-family: 'NotoSans';
+}
+
+#header-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+#header-details {
+    font-size: 12px;
+    font-weight: 500;
+}
+#header-tutorial {
+    font-size: 12px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+}
