@@ -5,20 +5,20 @@
 
 body {
     width:300px;
-    padding: 8px 15px 8px 15px;
     font-family: 'Noto Sans';
 }
 
 header {
     font-weight: 500;
     border-bottom: 1px solid rgb(175, 175, 175);
-    padding-bottom: 2px;
+    padding: 8px 15px 2px 15px;
 }
 .header-title {
     font-size: 16px;
 }
 .header-details{
     font-size: 12px;
+    font-weight: 450;
 }
 
 section{
@@ -26,15 +26,21 @@ section{
 }
 .section-list {
     padding: 2px 0px 2px 0px;
-
 }
 #section-setting {
     font-size: 14px;
-    padding-top: 2px;
+    padding: 5px 15px 5px 15px;
     border-top: 1px solid rgb(175, 175, 175);
     vertical-align: center;
 }
 #section-setting-gear-img {
     width: 14px;
     height: 14px;
+}
+
+.section-list:hover {
+    background-color: rgb(200, 200, 200, 50);
+}
+#section-setting:hover {
+    background-color: rgb(200, 200, 200, 50); 
 }
