@@ -2,10 +2,14 @@
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
-
 body {
     width:300px;
     font-family: 'Noto Sans';
+}
+
+.img-14px {
+    width: 14px;
+    height: 14px;
 }
 
 header {
@@ -23,16 +27,19 @@ header {
 section{
     font-size: 12px;
 }
-
 .list {
     padding: 2px 15px 2px 15px;
 }
 .list-title {
+    position: relative;
     font-size: 14px;
 }
-.list-title-img {
-    width: 14px;
-    height: 14px;
+#list-title-plus {
+    top: 2px; 
+    right: 0px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
 }
 
 #setting {
@@ -41,14 +48,7 @@ section{
     border-top: 1px solid rgb(175, 175, 175);
     vertical-align: center;
 }
-#setting-gear-img {
-    width: 14px;
-    height: 14px;
-}
 
-.list-items:hover {
+.hoverable:hover{
     background-color: rgb(200, 200, 200, 50);
-}
-#setting:hover {
-    background-color: rgb(200, 200, 200, 50); 
 }
