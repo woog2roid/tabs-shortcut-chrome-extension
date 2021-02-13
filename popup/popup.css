@@ -1,24 +1,40 @@
 @font-face {
-  font-family: "NotoSans";
-  src: url("../fonts/NotoSans-Light.ttf") format("truetype");
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
 
 body {
-    width:350px;
-    font-family: 'NotoSans';
+    width:300px;
+    padding: 8px 15px 8px 15px;
+    font-family: 'Noto Sans';
 }
 
-#header-title {
-    font-size: 18px;
+header {
     font-weight: 500;
+    border-bottom: 1px solid rgb(175, 175, 175);
+    padding-bottom: 2px;
 }
-#header-details {
-    font-size: 12px;
-    font-weight: 500;
+.header-title {
+    font-size: 16px;
 }
-#header-tutorial {
+.header-details{
     font-size: 12px;
-    border-bottom: 1px solid gray;
-    padding-bottom: 1px;
-    margin-bottom: 5px;
+}
+
+section{
+    font-size: 14px;
+}
+.section-list {
+    padding: 2px 0px 2px 0px;
+
+}
+.section-setting {
+    font-size: 14px;
+    padding-top: 2px;
+    border-top: 1px solid rgb(175, 175, 175);
+    vertical-align: center;
+}
+#section-setting-gear-img {
+    width: 14px;
+    height: 14px;
 }
