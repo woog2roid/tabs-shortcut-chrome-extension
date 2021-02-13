@@ -9,38 +9,46 @@ body {
 }
 
 header {
-    font-weight: 500;
-    border-bottom: 1px solid rgb(175, 175, 175);
-    padding: 8px 15px 2px 15px;
+    padding: 8px 15px 4px 15px;
 }
-.header-title {
+#header-title {
+    font-weight: 500;
     font-size: 16px;
 }
-.header-details{
-    font-size: 12px;
-    font-weight: 450;
+#header-details{
+    font-size: 11px;
+    font-style:italic;
 }
 
 section{
+    font-size: 12px;
+}
+
+.list {
+    padding: 2px 15px 2px 15px;
+}
+.list-title {
     font-size: 14px;
 }
-.section-list {
-    padding: 2px 0px 2px 0px;
+.list-title-img {
+    width: 14px;
+    height: 14px;
 }
-#section-setting {
+
+#setting {
     font-size: 14px;
     padding: 5px 15px 5px 15px;
     border-top: 1px solid rgb(175, 175, 175);
     vertical-align: center;
 }
-#section-setting-gear-img {
+#setting-gear-img {
     width: 14px;
     height: 14px;
 }
 
-.section-list:hover {
+.list-items:hover {
     background-color: rgb(200, 200, 200, 50);
 }
-#section-setting:hover {
+#setting:hover {
     background-color: rgb(200, 200, 200, 50); 
 }
