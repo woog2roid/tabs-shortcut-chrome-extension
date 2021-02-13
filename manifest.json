@@ -4,9 +4,11 @@
   "description": "This extension will help you open several tabs at once.",
   "permissions": ["unlimitedStorage"],
 
+  "options_page": "./option/option.html",
+  
   "browser_action": {
     "default_popup": "./popup/popup.html"
-  },
+  }, 
   
   "background": {
     "scripts": ["./background/background.js"],
@@ -19,7 +21,7 @@
         "default": "Ctrl + Shift + E",
         "mac": "MacCtrl + Shift + E"
       },
-      "description": "Opens popup.html"
+      "description": "Open popup.html"
     }
   },
 
