@@ -10,9 +10,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
                     chrome.storage.local.set({url: tab.url}, function () {
                         console.log(tab.url);
                     });
-                    sendResponse({ farewell: "finished: addTabBundle" });
                 });
-                console.log("----------------------------");
+                //async
+                setTimeout(function () { console.log("----------------------------") }, 10);
             });
         }
         else {
