@@ -1,7 +1,7 @@
 chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
-            const newElement = document.createElement("li");
+            const newElement = document.createElement("div");
             newElement.className = "hoverable";
             const newText = document.createTextNode(name);
             newElement.appendChild(newText);

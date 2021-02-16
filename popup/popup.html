@@ -15,9 +15,8 @@
         <div id = "header-details">"This extension will help you open several tabs at once."</div>
     </header>
     <section>
-        <div class = "list">
-            <div class = "list-title">
-                <img class = "img-14px" src="../images/list.svg" alt = " ">
+        <details class = "list">
+            <summary class = "list-title">
                 Tab Bundle Lists
                 <img id = "list-plus-img" class = "img-14px hoverable" src="../images/plus.svg" alt = " ">
                 
@@ -25,11 +24,9 @@
                     <label>Bundle Name to add: <input id = "bundle-name-input"type= "text" size = "18" placeholder = "enter tab bundle name" autofocus required>
                     </label>
                 </form id = "list-plus">
-            </div> 
-            
-            <ul id = "list-items">
-            </ul>
-        </div>
+            </summary> 
+            <dic id = "list-items"/>
+        </details>
         <div id = "setting" class = "hoverable">
             <img class = "img-14px" src="../images/gear.svg" alt = " "> Tab List Administration
         </div>

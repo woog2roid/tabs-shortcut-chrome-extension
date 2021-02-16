@@ -5,7 +5,10 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
             chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
                 if (res) {
                     res.tabBundleNameList.push(msg.tabBundleName);
-                    chrome.storage.local.set({ tabBundleNameList: res.tabBundleNameList });
+                    chrome.storage.local.set({ tabBundleNameList: res.tabBundleNameList }, function () {
+                        console.log("addTabBundle: Below is state changes of chrome.storage: nameList and urlList");
+                        console.log(res.tabBundleNameList);
+                    });
                 }
             });         
             let setUrls = {};
@@ -15,8 +18,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                     setUrls[msg.tabBundleName].push(tab.url);
                 });
                 chrome.storage.local.set(setUrls, function () {
-                    console.log("addTabBundle: Below is state changes of chrome.storage: nameList and urlList");
-                    console.log(res.tabBundleNameList);
                     console.log(setUrls);
                 });
             });
