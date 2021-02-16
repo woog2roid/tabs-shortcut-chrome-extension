@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                     setUrls[msg.tabBundleName].push(tab.url);
                 });
                 chrome.storage.local.set(setUrls, function () {
-                    console.log(setUrls);
+                    setTimeout(function () { console.log(setUrls); }, 30);
                 });
             });
         }

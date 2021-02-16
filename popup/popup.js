@@ -2,7 +2,8 @@ chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
             const newElement = document.createElement("div");
-            newElement.className = "hoverable";
+            newElement.className = "opener hoverable";
+            newElement.id = name;
             const newText = document.createTextNode(name);
             newElement.appendChild(newText);
             const container = document.getElementById("list-items");
@@ -29,4 +30,20 @@ addTabBundle.onsubmit = function addTabBundle() {
 const openOptionPage = document.getElementById("setting");
 openOptionPage.onclick = function openOptionPage() {
     window.open('../option/option.html', "PopupWin", "width=500,height=600"); 
+};
+
+window.onload = function () {
+    const openTabs = document.getElementsByClassName("opener");
+    for (let i = 0; i < openTabs.length; i++) {
+        openTabs[i].onclick = function openTabs() {
+            id = this.id;
+            option = {}; option[id] = [];
+            chrome.storage.local.get(option, function (urlsObject) {
+                urls = urlsObject[id];
+                urls.forEach(function (url) {
+                    chrome.tabs.create({ url: url });
+                });
+            });
+        }
+    }
 };
