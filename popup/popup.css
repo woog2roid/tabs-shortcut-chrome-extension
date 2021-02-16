@@ -11,6 +11,9 @@ body {
     width: 14px;
     height: 14px;
 }
+.hoverable:hover{
+    background-color: rgb(200, 200, 200, 50);
+}
 
 header {
     padding: 8px 15px 4px 15px;
@@ -31,15 +34,19 @@ section{
     padding: 2px 15px 2px 15px;
 }
 .list-title {
-    position: relative;
     font-size: 14px;
+    position: relative;
 }
-#list-title-plus {
-    top: 2px; 
-    right: 0px;
-    position: absolute;
+#list-plus-img {
     width: 18px;
     height: 18px;
+    right: 0px;
+    position: absolute;
+}
+#list-plus {
+    display: none;
+    padding-top: 5px;
+    font-size: 12px;
 }
 
 #setting {
@@ -47,8 +54,4 @@ section{
     padding: 5px 15px 5px 15px;
     border-top: 1px solid rgb(175, 175, 175);
     vertical-align: center;
-}
-
-.hoverable:hover{
-    background-color: rgb(200, 200, 200, 50);
 }
