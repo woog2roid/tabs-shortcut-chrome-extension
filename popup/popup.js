@@ -1,3 +1,16 @@
+chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
+    if (res) {
+        res.tabBundleNameList.forEach(function (name) {
+            const newElement = document.createElement("li");
+            newElement.className = "hoverable";
+            const newText = document.createTextNode(name);
+            newElement.appendChild(newText);
+            const container = document.getElementById("list-items");
+            container.appendChild(newElement);
+        });
+    }
+});
+
 const callNameForm = document.getElementById("list-plus-img");
 callNameForm.onclick = function callNameForm() {
     const nameForm = document.getElementById("list-plus");
