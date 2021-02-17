@@ -59,7 +59,7 @@ section{
 .deleter {
     width: 18px;
     height: 18px;
-    right: 0px;
+    right: 15px;
     position: absolute;
 }
 .deleter:hover {
