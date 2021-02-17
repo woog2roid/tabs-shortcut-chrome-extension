@@ -2,9 +2,9 @@
 - 자주 쓰는 탭 묶음을 기억하고 다시 이용할 수 있게 해주는 크롬 확장 프로그램
 - Chrome extensions that help you open several tabs at once
 
+
 <details>
-<style type="text/css">span {font-size:20px; }</style>
-<summary> <span>v 1.0.0 </span> </summary>
+<summary> <span style = "font-size:20px;" >v 1.0.0 </span> </summary>
 <div markdown = 1>
 
 - 구글 계정과 자동으로 연동
