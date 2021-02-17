@@ -63,7 +63,8 @@ window.onload = function () {
         deleteBundle[i].onclick = function () {
             chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
                 originalArray = res.tabBundleNameList;
-                originalArray.splice(i, i);
+                if (originalArray.length == 1) originalArray = [];
+                else originalArray.splice(i, i);
                 chrome.storage.local.set({ tabBundleNameList: originalArray }, function () {
                     openTabs[i].remove();
                     deleteBundle[i].remove();
