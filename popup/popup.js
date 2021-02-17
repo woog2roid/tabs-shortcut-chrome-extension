@@ -1,20 +1,30 @@
+
 chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
+            const container = document.createElement("div");
+            container.id = "list-grid-container";
+            document.getElementById("list-items").appendChild(container);
+
             const newElement = document.createElement("div");
             newElement.className = "opener hoverable";
             newElement.id = name;
             const newText = document.createTextNode(name);
             newElement.appendChild(newText);
-            const container = document.getElementById("list-items");
             container.appendChild(newElement);
+
+            //'<img class = "deleter" src="../images/dash.svg" alt = " ">'
+            const imgElement = document.createElement("img");
+            imgElement.setAttribute("src", "../images/dash.svg");//(속성명, 속성값)
+            imgElement.className = "deleter";
+            container.appendChild(imgElement);
         });
     }
 });
 
 const callNameForm = document.getElementById("list-plus-img");
 callNameForm.onclick = function callNameForm() {
-    const nameForm = document.getElementById("list-plus");
+    const nameForm = document.getElementById("add-bundle");
     nameForm.style.display = "block";
 };
 
@@ -34,6 +44,8 @@ openOptionPage.onclick = function openOptionPage() {
 
 window.onload = function () {
     const openTabs = document.getElementsByClassName("opener");
+    const deleteBundle = document.getElementsByClassName("deleter");
+
     for (let i = 0; i < openTabs.length; i++) {
         openTabs[i].onclick = function openTabs() {
             id = this.id;
@@ -45,5 +57,19 @@ window.onload = function () {
                 });
             });
         }
+    }
+
+    for (let i = 0; i < deleteBundle.length; i++) {
+        deleteBundle[i].onclick = function () {
+            chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
+                originalArray = res.tabBundleNameList;
+                originalArray.splice(i, i);
+                chrome.storage.local.set({ tabBundleNameList: originalArray }, function () {
+                    openTabs[i].remove();
+                    deleteBundle[i].remove();
+                });
+            });
+            chrome.storage.local.remove(openTabs[i].id);
+        };
     }
 };

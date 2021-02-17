@@ -38,15 +38,32 @@ section{
     position: relative;
 }
 #list-plus-img {
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    position: absolute;
+}
+#list-grid-container {
+    display: grid;
+}
+.list-control {
+    padding-top: 5px;
+    font-size: 12px;
+}
+#add-bundle {
+    display: none;
+}
+#list-items {
+    font-size: 12px;
+}
+.deleter {
     width: 18px;
     height: 18px;
     right: 0px;
     position: absolute;
 }
-#list-plus {
-    display: none;
-    padding-top: 5px;
-    font-size: 12px;
+.deleter:hover {
+    background-color: rgb(200,50,50,20);
 }
 
 #setting {
