@@ -1,12 +1,7 @@
 # tabs-shortcut-chrome-extension
 - 자주 쓰는 탭 묶음을 기억하고 다시 이용할 수 있게 해주는 크롬 확장 프로그램
 - Chrome extensions that help you open several tabs at once
-
-
-<details>
-<summary> <span style = "font-size:20px;" >v 1.0.0 </span> </summary>
-<div markdown = 1>
-
+## v1.0.0
 - 구글 계정과 자동으로 연동
   - Automatically synchronize with google accounts
 - ctrl + shift + E를 눌러 확장프로그램 열기
@@ -19,6 +14,3 @@
   - To delete the tab bundle, click \-
 - 하단의 디테일 창을 눌러 탭 묶음 항목들의 url 확인
   - To check the urls of tab bundle, click the details
-
-</div>
-</details>
