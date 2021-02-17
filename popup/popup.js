@@ -1,5 +1,5 @@
 
-chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
+chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
             const container = document.createElement("div");
@@ -37,9 +37,9 @@ addTabBundle.onsubmit = function addTabBundle() {
     });
 }
 
-const openOptionPage = document.getElementById("setting");
+const openOptionPage = document.getElementById("bundle-detail");
 openOptionPage.onclick = function openOptionPage() {
-    window.open('../option/option.html', "PopupWin", "width=500,height=600"); 
+    window.open('../detail/detail.html', "PopupWin", "width=500,height=600"); 
 };
 
 window.onload = function () {
@@ -50,7 +50,7 @@ window.onload = function () {
         openTabs[i].onclick = function openTabs() {
             id = this.id;
             option = {}; option[id] = [];
-            chrome.storage.local.get(option, function (urlsObject) {
+            chrome.storage.sync.get(option, function (urlsObject) {
                 urls = urlsObject[id];
                 urls.forEach(function (url) {
                     chrome.tabs.create({ url: url });
@@ -61,16 +61,16 @@ window.onload = function () {
 
     for (let i = 0; i < deleteBundle.length; i++) {
         deleteBundle[i].onclick = function () {
-            chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
+            chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
                 originalArray = res.tabBundleNameList;
                 if (originalArray.length == 1) originalArray = [];
                 else originalArray.splice(i, i);
-                chrome.storage.local.set({ tabBundleNameList: originalArray }, function () {
+                chrome.storage.sync.set({ tabBundleNameList: originalArray }, function () {
                     openTabs[i].remove();
                     deleteBundle[i].remove();
                 });
             });
-            chrome.storage.local.remove(openTabs[i].id);
+            chrome.storage.sync.remove(openTabs[i].id);
         };
     }
 };

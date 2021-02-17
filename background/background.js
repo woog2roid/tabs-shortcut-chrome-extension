@@ -2,10 +2,10 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === "addTabBundle: content -> background") {
         const winID = sender.tab.windowId;
         if (winID) {
-            chrome.storage.local.get({ tabBundleNameList: [] }, function (res) {
+            chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
                 if (res) {
                     res.tabBundleNameList.push(msg.tabBundleName);
-                    chrome.storage.local.set({ tabBundleNameList: res.tabBundleNameList }, function () {
+                    chrome.storage.sync.set({ tabBundleNameList: res.tabBundleNameList }, function () {
                         console.log("addTabBundle: Below is state changes of chrome.storage: nameList and urlList");
                         console.log(res.tabBundleNameList);
                     });
@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                 tabs.forEach(function (tab) {
                     setUrls[msg.tabBundleName].push(tab.url);
                 });
-                chrome.storage.local.set(setUrls, function () {
+                chrome.storage.sync.set(setUrls, function () {
                     setTimeout(function () { console.log(setUrls); }, 30);
                 });
             });

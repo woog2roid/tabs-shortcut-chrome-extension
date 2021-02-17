@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Noto Sans';
+    line-hieght: 110%;
+}
+
+header {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 80%;
+    border-bottom:1px solid rgb(62, 62, 62);
+}
+header span {
+    font-size: 12px;
+}
+
+details {
+    padding-bottom: 10px;
+}
+summary {
+    font-size: 15px;
+    font-weight: 500;
+}
