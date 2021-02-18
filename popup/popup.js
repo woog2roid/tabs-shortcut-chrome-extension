@@ -1,4 +1,3 @@
-
 chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
@@ -32,8 +31,13 @@ const addTabBundle = document.getElementById("list-plus");
 addTabBundle.onsubmit = function addTabBundle() {
     tabBundleName = document.getElementById("bundle-name-input").value; 
     //alert(tabBundleName);
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName} );
+    chrome.tabs.query({currentWindow: true}, function (tabs) {
+        for (let i = 0; tabs.length; i++) {
+            if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) {
+                chrome.tabs.sendMessage(tabs[0].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
+                break;
+            }
+        }
     });
 }
 
@@ -56,6 +60,7 @@ window.onload = function () {
                     chrome.tabs.create({ url: url });
                 });
             });
+            location.reload();
         }
     }
 
