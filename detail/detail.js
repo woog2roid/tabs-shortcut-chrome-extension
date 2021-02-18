@@ -42,9 +42,18 @@ window.onload = function () {
             //alert(item.id);
             const inputs = document.getElementsByClassName(item.id);
             let urlArr = [];
+            let isFormatted = true;
             for (let index = 0; index < inputs.length; index++){
+                //alert(inputs[index].value);
+                if (inputs[index].value.indexOf("http://") == -1 && inputs[index].value.indexOf("https://") == -1) {
+                    isFormatted = false;
+                    inputs[index].value = "https://" + inputs[index].value; 
+                }
                 urlArr.push(inputs[index].value);
-                alert(inputs[index].value);
+            }
+
+            if (!isFormatted) {
+                alert("Fully-qualified URLs must include a scheme. \n(i.e., 'http://www.google.com', not 'www.google.com'.)");
             }
 
             let option = {}; option[item.id] = urlArr;
