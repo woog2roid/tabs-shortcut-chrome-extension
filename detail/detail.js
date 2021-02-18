@@ -51,9 +51,9 @@ window.onload = function () {
     const forms = document.getElementsByTagName("form");
     for (let i = 0; i < forms.length; i++) {
         forms[i].onsubmit = function () {
-            //alert("submit");
-            
+            alert("submit");
             const item = forms[i];
+            
             
             const inputs = document.getElementsByClassName(item.id);
             let urlArr = [];
@@ -73,8 +73,9 @@ window.onload = function () {
             }
 
             let option = {}; option[item.id] = urlArr;
-            chrome.storage.sync.set(option);
-            
+            chrome.storage.sync.set(option, function () {
+                location.reload();
+            });
         };
     }
 
@@ -82,7 +83,7 @@ window.onload = function () {
     for (let i = 0; i < listAdders.length; i++) {
         listAdders[i].onclick = function () {
             let id = listAdders[i].id.substring(0, (listAdders[i].id.length) - 6);
-            //alert(id);
+            alert(id);
 
             formCon = document.getElementById(id);
             const liContainer = document.createElement("li");

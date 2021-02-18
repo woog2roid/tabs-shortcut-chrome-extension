@@ -71,11 +71,11 @@ window.onload = function () {
                 if (originalArray.length == 1) originalArray = [];
                 else originalArray.splice(i, i);
                 chrome.storage.sync.set({ tabBundleNameList: originalArray }, function () {
-                    openTabs[i].remove();
-                    deleteBundle[i].remove();
+                    chrome.storage.sync.remove(openTabs[i].id);
+                    openTabs[i].parentNode.removeChild(openTabs[i]);
+                    deleteBundle[i].parentNode.removeChild(deleteBundle[i]);
                 });
             });
-            chrome.storage.sync.remove(openTabs[i].id);
         };
     }
 };
