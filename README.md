@@ -39,3 +39,9 @@ CRUD available (Create, Read, Update, Delete)
   - error fix that occurs when url formatting is not observed
   - delete url by entering an empty string
   - add url by clicking add list and entering new url
+
+### v1.1.1
+- 탭 번들을 추가하고 새로고침을 해야만 리스트가 보이던 문제 해결
+- url이 chrome://으로 시작하는 크롬 기본 페이지에서는 동작에 오류가 있던 오류 해결
+- bug fix: now added tab bundle shows immediately
+- bug fix: now extension works properly at pages started with "chrome://"
