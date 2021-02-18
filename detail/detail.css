@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Noto Sans';
-    line-hieght: 110%;
+    line-height: 110%;
 }
 
 header {
@@ -13,10 +13,12 @@ header {
     font-size: 20px;
     margin-bottom: 10px;
     line-height: 80%;
+    padding-bottom: 6px;
     border-bottom:1px solid rgb(62, 62, 62);
 }
 header span {
     font-size: 12px;
+    line-height: 70%;
 }
 
 details {
@@ -25,4 +27,10 @@ details {
 summary {
     font-size: 15px;
     font-weight: 500;
+}
+form {
+    padding: 8px 0px 5px 0px;
+}
+li {
+    padding: 0px 0px 5px 0px;
 }
