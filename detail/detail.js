@@ -47,23 +47,22 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     }
 });
 
-window.onload = function () {
+window.onload = setTimeout(function () {
     const forms = document.getElementsByTagName("form");
     for (let i = 0; i < forms.length; i++) {
         forms[i].onsubmit = function () {
             //alert("submit");
             const item = forms[i];
             
-            
             const inputs = document.getElementsByClassName(item.id);
             let urlArr = [];
             let isFormatted = true;
-            for (let index = 0; index < inputs.length; index++){
+            for (let index = 0; index < inputs.length; index++) {
                 //alert(inputs[index].value);
                 if (inputs[index].value.length == 0) continue;
                 if (inputs[index].value.indexOf("http://") == -1 && inputs[index].value.indexOf("https://") == -1) {
                     isFormatted = false;
-                    inputs[index].value = "https://" + inputs[index].value; 
+                    inputs[index].value = "https://" + inputs[index].value;
                 }
                 urlArr.push(inputs[index].value);
             }
@@ -73,18 +72,15 @@ window.onload = function () {
             }
 
             let option = {}; option[item.id] = urlArr;
-            chrome.storage.sync.set(option, function () {
-                location.reload();
-            });
+            chrome.storage.sync.set(option, () => { location.reload(); });
         };
     }
 
     const listAdders = document.getElementsByClassName("listAdder");
     for (let i = 0; i < listAdders.length; i++) {
-        listAdders[i].onclick = function () {
+        listAdders[i].addEventListener('click', function () {
             let id = listAdders[i].id.substring(0, (listAdders[i].id.length) - 6);
             //alert(id);
-
             formCon = document.getElementById(id);
             const liContainer = document.createElement("li");
             formCon.appendChild(liContainer);
@@ -92,6 +88,6 @@ window.onload = function () {
             tabsList.className = id;
             tabsList.setAttribute("size", 60);
             liContainer.appendChild(tabsList);
-        };
+        });
     }
-};
+}, 50);

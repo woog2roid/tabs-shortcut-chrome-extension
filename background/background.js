@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (msg, sender) {
     if (msg.action === "addTabBundle: content -> background") {
         const winID = sender.tab.windowId;
         if (winID) {
@@ -18,7 +18,8 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
                     setUrls[msg.tabBundleName].push(tab.url);
                 });
                 chrome.storage.sync.set(setUrls, function () {
-                    setTimeout(function () { console.log(setUrls); }, 30);
+                    //to see console easily
+                    setTimeout(function () { console.log(setUrls); }, 10);
                 });
             });
         }

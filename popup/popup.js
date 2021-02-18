@@ -12,7 +12,6 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
             newElement.appendChild(newText);
             container.appendChild(newElement);
 
-            //'<img class = "deleter" src="../images/dash.svg" alt = " ">'
             const imgElement = document.createElement("img");
             imgElement.setAttribute("src", "../images/dash.svg");//(속성명, 속성값)
             imgElement.className = "deleter";
@@ -29,17 +28,17 @@ callNameForm.onclick = function callNameForm() {
 
 const addTabBundle = document.getElementById("list-plus");
 addTabBundle.onsubmit = function addTabBundle() {
-    tabBundleName = document.getElementById("bundle-name-input").value; 
+    tabBundleName = document.getElementById("bundle-name-input").value;
     //alert(tabBundleName);
-    chrome.tabs.query({currentWindow: true}, function (tabs) {
+    chrome.tabs.query({ currentWindow: true }, function (tabs) {
+        let index = 0;
         for (let i = 0; tabs.length; i++) {
-            if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) {
-                chrome.tabs.sendMessage(tabs[0].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
-                break;
-            }
+            if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) { index = i; break; }
         }
+        chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
     });
-}
+    setTimeout(() => { location.reload();}, 100)
+};
 
 const openOptionPage = document.getElementById("bundle-detail");
 openOptionPage.onclick = function openOptionPage() {
@@ -60,7 +59,6 @@ window.onload = function () {
                     chrome.tabs.create({ url: url });
                 });
             });
-            location.reload();
         }
     }
 
@@ -71,11 +69,18 @@ window.onload = function () {
                 if (originalArray.length == 1) originalArray = [];
                 else originalArray.splice(i, i);
                 chrome.storage.sync.set({ tabBundleNameList: originalArray }, function () {
-                    chrome.storage.sync.remove(openTabs[i].id);
-                    openTabs[i].parentNode.removeChild(openTabs[i]);
-                    deleteBundle[i].parentNode.removeChild(deleteBundle[i]);
+                    try {
+                        chrome.storage.sync.remove(openTabs[i].id, () => {
+                            setTimeout(() => {
+                                openTabs[i].parentNode.removeChild(openTabs[i]);
+                                deleteBundle[i].parentNode.removeChild(deleteBundle[i]);
+                            }, 30);
+                        });
+                    } catch (e) {
+                        location.reload();
+                    }
                 });
             });
-        };
-    }
+        }
+    };
 };
