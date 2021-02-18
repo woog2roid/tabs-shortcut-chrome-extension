@@ -5,7 +5,7 @@
 ### 설치방법(How To Install)
 1. 오른쪽의 Release를 눌러 Assets에서 .zip를 다운받는다. 상단의 Code를 눌러 다운받으면, 작업중인 미완성 버전을 다운받을 수도 있다.
 2. chrome 기반의 브라우저에서 url 창에 [chrome://extensions](chrome://extensions)을 입력한다.
-3. 우측 상단의 "개발자 모드"를 키고 .zip 파일을 압축해제한 후 "압축해제 된 학장 프로그램을 로드합니다."를 눌러 파일을 로드한다.   
+3. 우측 상단의 "개발자 모드"를 키고 .zip 파일을 압축해제한 후 "압축해제 된 확장 프로그램을 로드합니다."를 눌러 파일을 로드한다.   
 4. 원활한 사용을 위해 크롬을 다시 시작하는 것을 추천한다. 앱을 다운로드 후, 탭에서 새로고침을 해야 정상적으로 작동한다.
 --- 
 1. Press Release on the right to download .zip from Assets. Otherwise, you may download the incomplete version under development. 
