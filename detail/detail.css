@@ -28,9 +28,25 @@ summary {
     font-size: 15px;
     font-weight: 500;
 }
+
+.listAdder {
+    width: 25px;
+    height: 25px;
+    right: 2px;
+    position: relative;
+}
+.submit {
+    top: -7px;
+    position: relative;
+}
+
 form {
     padding: 8px 0px 5px 0px;
 }
 li {
     padding: 0px 0px 5px 0px;
+}
+
+.hoverable:hover {
+    background-color: rgb(200, 200, 200, 50);
 }
