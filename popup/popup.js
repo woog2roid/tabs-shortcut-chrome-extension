@@ -36,8 +36,8 @@ addTabBundle.onsubmit = function addTabBundle() {
             if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) { index = i; break; }
         }
         chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
+        setTimeout(() => { location.reload(); }, 300);
     });
-    setTimeout(() => { location.reload();}, 100)
 };
 
 const openOptionPage = document.getElementById("bundle-detail");
