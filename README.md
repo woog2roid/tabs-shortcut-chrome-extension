@@ -43,7 +43,7 @@ CRUD available (Create, Read, Update, Delete)
 ### v1.1.1
 - 탭 번들을 추가하고 새로고침을 해야만 리스트가 보이던 문제 해결
 - url이 chrome://으로 시작하는 크롬 기본 페이지에서는 동작에 오류가 있던 오류 해결
-- 그 외 다수의 버그 수정
+- 그 외 다수의 구글 저장소의 비동기에서 비롯된 버그 수정
 - bug fix: now added tab bundle shows immediately
 - bug fix: now extension works properly at pages started with "chrome://"
-- Many other bug fixes
+- bug fix: bugs from asynchronization of chrome storage 
