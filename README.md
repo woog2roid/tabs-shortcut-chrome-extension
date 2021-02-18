@@ -46,8 +46,10 @@ CRUD available (Create, Read, Update, Delete)
   - 정확히는 크롬 윈도우에 http:// https:// 로 시작하는 url을 가진 탭이 하나 있어야함
   - chrome API에서 지원하지 않는 기능을 로직을 통해 구현하여서 생긴 문제
 - 그 외 다수의 구글 저장소의 비동기에서 비롯된 버그 수정
+- 추가적으로, sync storage를 사용하기 때문에 분당, 시간당 저장소 이용횟수에 제한이 있습니다.
 - bug fix: now added tab bundle shows immediately
 - bug fix: now extension works properly at pages started with "chrome://"  
   - To be exact, the Chrome window must have one tab with url starting with http:// https://
   - This is a problem by implementing features that are not supported by the Chrome API
 - bug fix: bugs from asynchronization of chrome storage 
+- Additionally, because of sync storage, there is a limit on the number of times
