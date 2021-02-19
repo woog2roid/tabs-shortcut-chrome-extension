@@ -4,7 +4,3 @@ chrome.extension.onMessage.addListener(function (msg, sender, sendResponse) {
         chrome.runtime.sendMessage({ action: "addTabBundle: content -> background", tabBundleName: msg.tabBundleName });
     }
 });
-
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    sendResponse({ farewell: "goodbye" });
-});
