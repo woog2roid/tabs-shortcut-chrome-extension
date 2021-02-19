@@ -1,6 +1,6 @@
 {
   "name": "tabs shortcut",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "This extension will help you open several tabs at once.",
   "permissions": ["unlimitedStorage", "tabs", "storage"],
 

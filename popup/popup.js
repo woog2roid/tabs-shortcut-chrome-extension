@@ -1,21 +1,27 @@
 chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
+            /*
+            nodes = document.getElementById("list-items").childNodes;
+            for (let i = 0; i < nodes.length; i++) {
+                document.getElementById("list-items").removeChild(nodes[i]);
+            }
+            */
             const container = document.createElement("div");
             container.id = "list-grid-container";
             document.getElementById("list-items").appendChild(container);
-
+    
             const newElement = document.createElement("div");
             newElement.className = "opener hoverable";
             newElement.id = name;
             const newText = document.createTextNode(name);
             newElement.appendChild(newText);
             container.appendChild(newElement);
-
+    
             const imgElement = document.createElement("img");
             imgElement.setAttribute("src", "../images/dash.svg");//(속성명, 속성값)
             imgElement.className = "deleter";
-            container.appendChild(imgElement);
+            container.appendChild(imgElement)
         });
     }
 });
@@ -35,8 +41,10 @@ addTabBundle.onsubmit = function addTabBundle() {
         for (let i = 0; tabs.length; i++) {
             if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) { index = i; break; }
         }
-        chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
-        setTimeout(() => { location.reload(); }, 300);
+        chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName }, function(response) {
+            console.log(response.farewell);
+            location.reload();
+        });
     });
 };
 
