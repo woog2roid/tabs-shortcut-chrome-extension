@@ -41,9 +41,9 @@ addTabBundle.onsubmit = function addTabBundle() {
         for (let i = 0; tabs.length; i++) {
             if (tabs[i].url.indexOf("http://") != -1 || tabs[i].url.indexOf("https://") != -1) { index = i; break; }
         }
-        chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName }, function(response) {
+        chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName }, function (response) {
             console.log(response.farewell);
-            location.reload();
+            setTimeout(() => location.reload(), 300);
         });
     });
 };
