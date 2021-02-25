@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,30 @@
     <script type="text/javascript" src="./popup.js" async></script>
     <title>Tabs Shortcut</title>
 </head>
+
 <body>
     <header>
         <div id = "header-title">Tabs Shortcut</div>
         <div id = "header-details">"This extension will help you open several tabs at once."</div>
     </header>
+
     <section>
         <details class = "list">
-            <summary class = "list-title">
+            <summary class = "list-header">
                 Tab Bundle List
-                <img id = "list-plus-img" class = "hoverable" src="../images/plus.svg" alt = " ">
-                
-                <form id = "list-plus">
-                    <label id = "add-bundle" class = "list-control">Bundle Name to add: <input id = "bundle-name-input" type= "text" size = "14" placeholder = "enter bundle name" autofocus required></label>
+                <img id = "list-adder-icon" class = "hover-gray" src="../images/plus.svg" alt = " ">                
+                <form id = "list-adder">
+                    <label id = "adder-module">Bundle Name to add:
+                        <input id = "adder-module-input" type= "text" size = "14" placeholder = "enter bundle name" autofocus required>
+                    </label>
                 </form>
-            </summary> 
+            </summary>
             <div id = "list-items">
             </div>
         </details>
-        <div id = "bundle-detail" class = "hoverable">
-            <img class = "img-14px" src="../images/gear.svg" alt = " "> Tab Bundle Details
+
+        <div id = "details" class = "hover-gray">
+            <img id = "details-gear-icon" src="../images/gear.svg" alt = " "> Tab Bundle Details
         </div>
     </section>
 </body>

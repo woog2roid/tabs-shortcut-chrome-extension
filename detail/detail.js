@@ -51,14 +51,12 @@ window.onload = setTimeout(function () {
     const forms = document.getElementsByTagName("form");
     for (let i = 0; i < forms.length; i++) {
         forms[i].onsubmit = function () {
-            //alert("submit");
             const item = forms[i];
             
             const inputs = document.getElementsByClassName(item.id);
             let urlArr = [];
             let isFormatted = true;
             for (let index = 0; index < inputs.length; index++) {
-                //alert(inputs[index].value);
                 if (inputs[index].value.length == 0) continue;
                 if (inputs[index].value.indexOf("http://") == -1 && inputs[index].value.indexOf("https://") == -1) {
                     isFormatted = false;
@@ -80,7 +78,6 @@ window.onload = setTimeout(function () {
     for (let i = 0; i < listAdders.length; i++) {
         listAdders[i].addEventListener('click', function () {
             let id = listAdders[i].id.substring(0, (listAdders[i].id.length) - 6);
-            //alert(id);
             formCon = document.getElementById(id);
             const liContainer = document.createElement("li");
             formCon.appendChild(liContainer);

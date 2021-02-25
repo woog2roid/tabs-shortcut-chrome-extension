@@ -18,7 +18,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
                     setUrls[msg.tabBundleName].push(tab.url);
                 });
                 chrome.storage.sync.set(setUrls, function () {
-                    //to see console easily
                     setTimeout(function () { console.log(setUrls); }, 10);
                 });
             });

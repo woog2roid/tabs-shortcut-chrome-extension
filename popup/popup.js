@@ -1,12 +1,6 @@
 chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
-            /*
-            nodes = document.getElementById("list-items").childNodes;
-            for (let i = 0; i < nodes.length; i++) {
-                document.getElementById("list-items").removeChild(nodes[i]);
-            }
-            */
             const container = document.createElement("div");
             container.id = "list-grid-container";
             document.getElementById("list-items").appendChild(container);
@@ -19,23 +13,22 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
             container.appendChild(newElement);
     
             const imgElement = document.createElement("img");
-            imgElement.setAttribute("src", "../images/dash.svg");//(속성명, 속성값)
-            imgElement.className = "deleter";
+            imgElement.setAttribute("src", "../images/dash.svg");
+            imgElement.className = "list-deleter-icon";
             container.appendChild(imgElement)
         });
     }
 });
 
-const callNameForm = document.getElementById("list-plus-img");
-callNameForm.onclick = function callNameForm() {
-    const nameForm = document.getElementById("add-bundle");
+const callAdderForm = document.getElementById("list-adder-icon");
+callAdderForm.onclick = function callAdderForm() {
+    const nameForm = document.getElementById("adder-module");
     nameForm.style.display = "block";
 };
 
-const addTabBundle = document.getElementById("list-plus");
+const addTabBundle = document.getElementById("list-adder");
 addTabBundle.onsubmit = function addTabBundle() {
-    tabBundleName = document.getElementById("bundle-name-input").value;
-    //alert(tabBundleName);
+    tabBundleName = document.getElementById("adder-module-input").value;
     chrome.tabs.query({ currentWindow: true }, function (tabs) {
         let index = 0;
         for (let i = 0; tabs.length; i++) {
@@ -45,7 +38,7 @@ addTabBundle.onsubmit = function addTabBundle() {
     });
 };
 
-const openOptionPage = document.getElementById("bundle-detail");
+const openOptionPage = document.getElementById("details");
 openOptionPage.onclick = function openOptionPage() {
     window.open('../detail/detail.html', "PopupWin", "width=500,height=600"); 
 };

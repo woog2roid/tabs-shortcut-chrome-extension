@@ -2,17 +2,10 @@
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
+
 body {
     width:300px;
     font-family: 'Noto Sans';
-}
-
-.img-14px {
-    width: 14px;
-    height: 14px;
-}
-.hoverable:hover{
-    background-color: rgb(200, 200, 200, 50);
 }
 
 header {
@@ -27,48 +20,56 @@ header {
     font-style:italic;
 }
 
-section{
+section {
     font-size: 12px;
 }
+
 .list {
     padding: 2px 15px 2px 15px;
 }
-.list-title {
+.list-header {
     font-size: 14px;
     position: relative;
 }
-#list-plus-img {
+#list-adder-icon {
     width: 20px;
     height: 20px;
     right: 0px;
     position: absolute;
 }
-#list-grid-container {
-    display: grid;
-}
-.list-control {
+#adder-module {
     padding-top: 5px;
     font-size: 12px;
-}
-#add-bundle {
     display: none;
 }
+
 #list-items {
     font-size: 12px;
 }
-.deleter {
+#list-grid-container {
+    display: grid;
+}
+.list-deleter-icon {
     width: 18px;
     height: 18px;
     right: 15px;
     position: absolute;
 }
-.deleter:hover {
-    background-color: rgb(200,50,50,20);
-}
 
-#bundle-detail {
+#details {
     font-size: 14px;
     padding: 5px 15px 5px 15px;
     border-top: 1px solid rgb(175, 175, 175);
     vertical-align: center;
+}
+#details-gear-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.list-deleter-icon:hover {
+        background-color: rgb(200,50,50,20);
+}
+.hover-gray:hover{
+    background-color: rgb(200, 200, 200, 50);
 }
