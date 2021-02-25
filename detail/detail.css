@@ -63,6 +63,7 @@ li {
 }
 
 footer {
+    padding-left: 5px;  
     position: absolute;
     bottom: 0;
     left: 0;
