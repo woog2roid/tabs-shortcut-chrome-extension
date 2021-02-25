@@ -1,3 +1,4 @@
+//initialize
 chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
@@ -20,6 +21,7 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     }
 });
 
+//add bundle
 const callAdderForm = document.getElementById("list-adder-icon");
 callAdderForm.onclick = function callAdderForm() {
     const nameForm = document.getElementById("adder-module");
@@ -42,6 +44,7 @@ function(request, sender, sendResponse) {
         if (request.action == "call reload: content -> popup") location.reload();
 });
 
+//open details
 const openOptionPage = document.getElementById("details");
 openOptionPage.onclick = function openOptionPage() {
     window.open('../detail/detail.html', "PopupWin", "width=500,height=600"); 
@@ -50,7 +53,7 @@ openOptionPage.onclick = function openOptionPage() {
 window.onload = function () {
     const openTabs = document.getElementsByClassName("tab-opener");
     const deleteBundle = document.getElementsByClassName("list-deleter-icon");
-
+    //open
     for (let i = 0; i < openTabs.length; i++) {
         openTabs[i].onclick = function openTabs() {
             id = this.id;
@@ -63,13 +66,13 @@ window.onload = function () {
             });
         }
     }
-
+    //delete
     for (let i = 0; i < deleteBundle.length; i++) {
         deleteBundle[i].onclick = function () {
             chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
                 originalArray = res.tabBundleNameList;
                 if (originalArray.length == 1) originalArray = [];
-                else originalArray.splice(i, i);
+                else originalArray.splice(i, 1);
                 chrome.storage.sync.set({ tabBundleNameList: originalArray }, function () {
                     try {
                         chrome.storage.sync.remove(openTabs[i].id, () => {

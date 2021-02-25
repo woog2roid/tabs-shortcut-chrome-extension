@@ -2,6 +2,7 @@
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
+/*default layout setting*/
 *{
     box-sizing: border-box;
 }
@@ -20,6 +21,7 @@ body {
     padding-bottom: 30px;
 }
 
+/*header*/
 header {
     font-weight: 300;
     font-size: 20px;
@@ -33,6 +35,7 @@ header span {
     line-height: 70%;
 }
 
+/*section*/
 #section {
     padding-left:6px;
 }
@@ -43,7 +46,6 @@ summary {
     font-size: 15px;
     font-weight: 500;
 }
-
 .listAdder {
     width: 25px;
     height: 25px;
@@ -62,6 +64,7 @@ li {
     padding: 0px 0px 5px 0px;
 }
 
+/*footer*/
 footer {
     padding-left: 5px;  
     position: absolute;
@@ -75,6 +78,7 @@ footer a{
     color: black;   
 }
 
+/*action*/
 .hoverable:hover {
     background-color: rgb(200, 200, 200, 50);
 }

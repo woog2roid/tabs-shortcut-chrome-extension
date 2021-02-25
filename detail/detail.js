@@ -1,3 +1,4 @@
+//initialize
 chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
     if (res) {
         res.tabBundleNameList.forEach(function (name) {
@@ -48,11 +49,11 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
 });
 
 window.onload = setTimeout(function () {
+    //submit changes
     const forms = document.getElementsByTagName("form");
     for (let i = 0; i < forms.length; i++) {
         forms[i].onsubmit = function () {
             const item = forms[i];
-            
             const inputs = document.getElementsByClassName(item.id);
             let urlArr = [];
             let isFormatted = true;
@@ -60,8 +61,9 @@ window.onload = setTimeout(function () {
                 if (inputs[index].value.length == 0) continue;
                 if (inputs[index].value.indexOf("http://") == -1 && inputs[index].value.indexOf("https://") == -1) {
                     isFormatted = false;
-                    //v1.1.2 function delete
-                    //inputs[index].value = "https://" + inputs[index].value;
+                    /*v1.1.2 function delete
+                    inputs[index].value = "https://" + inputs[index].value;
+                    */
                 }
                 urlArr.push(inputs[index].value);
             }
@@ -75,6 +77,7 @@ window.onload = setTimeout(function () {
         };
     }
 
+    //add url to bundle
     const listAdders = document.getElementsByClassName("listAdder");
     for (let i = 0; i < listAdders.length; i++) {
         listAdders[i].addEventListener('click', function () {

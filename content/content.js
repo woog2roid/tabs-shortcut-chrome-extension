@@ -1,3 +1,4 @@
+//storage sync
 chrome.extension.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === "addTabBundle: popup -> content") {
         console.log("addTabBundle: popup -> content: success");
@@ -7,7 +8,6 @@ chrome.extension.onMessage.addListener(function (msg, sender, sendResponse) {
         });
     }
 });
-
 function callPopupReload() {
     chrome.runtime.sendMessage({ action: "call reload: content -> popup" });
 }

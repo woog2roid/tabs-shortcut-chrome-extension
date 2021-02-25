@@ -2,12 +2,12 @@
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
-
 body {
     width:300px;
     font-family: 'Noto Sans';
 }
 
+/*header*/
 header {
     padding: 8px 15px 4px 15px;
 }
@@ -20,10 +20,11 @@ header {
     font-style:italic;
 }
 
+/*section*/
 section {
     font-size: 12px;
 }
-
+/*section-list*/
 .list {
     padding: 2px 15px 2px 15px;
 }
@@ -42,7 +43,6 @@ section {
     font-size: 12px;
     display: none;
 }
-
 #list-items {
     font-size: 12px;
 }
@@ -55,7 +55,7 @@ section {
     right: 15px;
     position: absolute;
 }
-
+/*section-details*/
 #details {
     font-size: 14px;
     padding: 5px 15px 5px 15px;
@@ -67,6 +67,7 @@ section {
     height: 14px;
 }
 
+/*actions*/
 .list-deleter-icon:hover {
         background-color: rgb(200,50,50,20);
 }

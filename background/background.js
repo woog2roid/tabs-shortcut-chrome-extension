@@ -1,3 +1,4 @@
+//storage sync
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === "addTabBundle: content -> background") {
         const winID = sender.tab.windowId;
