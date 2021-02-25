@@ -2,10 +2,22 @@
   font-family: "Noto Sans";
   src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
-
+*{
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
 body {
     font-family: 'Noto Sans';
     line-height: 110%;
+    margin: 0;
+    height: 100%;
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 30px;
 }
 
 header {
@@ -13,7 +25,7 @@ header {
     font-size: 20px;
     margin-bottom: 10px;
     line-height: 80%;
-    padding-bottom: 6px;
+    padding: 6px 0px 6px 10px;
     border-bottom:1px solid rgb(62, 62, 62);
 }
 header span {
@@ -21,6 +33,9 @@ header span {
     line-height: 70%;
 }
 
+#section {
+    padding-left:6px;
+}
 details {
     padding-bottom: 10px;
 }
@@ -48,10 +63,15 @@ li {
 }
 
 footer {
-    width:100%;
-    height:40px;
-    position:absolute;
-    bottom:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(51, 51, 51, 0.1);
+    height: 30px;
+}
+footer a{
+    color: black;   
 }
 
 .hoverable:hover {
