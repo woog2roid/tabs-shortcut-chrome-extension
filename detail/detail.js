@@ -60,7 +60,8 @@ window.onload = setTimeout(function () {
                 if (inputs[index].value.length == 0) continue;
                 if (inputs[index].value.indexOf("http://") == -1 && inputs[index].value.indexOf("https://") == -1) {
                     isFormatted = false;
-                    inputs[index].value = "https://" + inputs[index].value;
+                    //v1.1.2 function delete
+                    //inputs[index].value = "https://" + inputs[index].value;
                 }
                 urlArr.push(inputs[index].value);
             }

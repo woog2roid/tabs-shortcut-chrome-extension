@@ -57,5 +57,7 @@ CRUD available (Create, Read, Update, Delete)
 ### v1.1.2
 - 탭 번들을 추가하고 바로 리스트에서 보이지 않던 오류 수정
 - 디테일 창의 UI 수정
+- 디테일 창에서 url 수정 시, url이 qualified되지 않았으면 자동으로 https://를 붙여주는 기능 제거
 - bug fix: now added tab bundle shows immediately
 - UI modification in detail window
+- function delete: automatically qualify url
