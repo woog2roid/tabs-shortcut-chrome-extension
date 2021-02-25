@@ -6,7 +6,7 @@ chrome.storage.sync.get({ tabBundleNameList: [] }, function (res) {
             document.getElementById("list-items").appendChild(container);
     
             const newElement = document.createElement("div");
-            newElement.className = "opener hoverable";
+            newElement.className = "tab-opener hover-gray";
             newElement.id = name;
             const newText = document.createTextNode(name);
             newElement.appendChild(newText);
@@ -44,8 +44,8 @@ openOptionPage.onclick = function openOptionPage() {
 };
 
 window.onload = function () {
-    const openTabs = document.getElementsByClassName("opener");
-    const deleteBundle = document.getElementsByClassName("deleter");
+    const openTabs = document.getElementsByClassName("tab-opener");
+    const deleteBundle = document.getElementsByClassName("list-deleter-icon");
 
     for (let i = 0; i < openTabs.length; i++) {
         openTabs[i].onclick = function openTabs() {
