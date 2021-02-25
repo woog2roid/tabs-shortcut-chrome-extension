@@ -1,4 +1,4 @@
-chrome.runtime.onMessage.addListener(function (msg, sender) {
+chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.action === "addTabBundle: content -> background") {
         const winID = sender.tab.windowId;
         if (winID) {
@@ -25,5 +25,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender) {
         else {
             console.log("No window ID...");
         }
+        sendResponse({farewell: "here comes responese"});
     }
 });

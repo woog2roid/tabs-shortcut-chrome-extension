@@ -37,6 +37,10 @@ addTabBundle.onsubmit = function addTabBundle() {
         chrome.tabs.sendMessage(tabs[index].id, { action: "addTabBundle: popup -> content", tabBundleName: tabBundleName });
     });
 };
+chrome.runtime.onMessage.addListener(
+function(request, sender, sendResponse) {
+        if (request.action == "call reload: content -> popup") location.reload();
+});
 
 const openOptionPage = document.getElementById("details");
 openOptionPage.onclick = function openOptionPage() {
