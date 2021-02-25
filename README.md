@@ -53,3 +53,9 @@ CRUD available (Create, Read, Update, Delete)
   - This is a problem by implementing features that are not supported by the Chrome API
 - bug fix: bugs from asynchronization of chrome storage 
 - Additionally, because of sync storage, there is a limit on the number of times
+
+### v1.1.2
+- 탭 번들을 추가하고 바로 리스트에서 보이지 않던 오류 수정
+- 디테일 창의 UI 수정
+- bug fix: now added tab bundle shows immediately
+- UI modification in detail window
