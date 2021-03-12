@@ -61,3 +61,7 @@ CRUD available (Create, Read, Update, Delete)
 - bug fix: now added tab bundle shows immediately
 - UI modification in detail window
 - function delete: automatically qualify url
+
+### v1.1.3
+- 탭 번들을 삭제하는 부분의 코드 수정
+- code cleanup: tab bundle delete

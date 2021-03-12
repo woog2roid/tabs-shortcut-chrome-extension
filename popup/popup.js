@@ -76,10 +76,8 @@ window.onload = function () {
                 chrome.storage.sync.set({ tabBundleNameList: originalArray }, function () {
                     try {
                         chrome.storage.sync.remove(openTabs[i].id, () => {
-                            setTimeout(() => {
-                                openTabs[i].parentNode.removeChild(openTabs[i]);
-                                deleteBundle[i].parentNode.removeChild(deleteBundle[i]);
-                            }, 30);
+                            openTabs[i].parentNode.removeChild(openTabs[i]);
+                            deleteBundle[i].parentNode.removeChild(deleteBundle[i]);
                         });
                     } catch (e) {
                         location.reload();
