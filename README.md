@@ -3,16 +3,45 @@
 - Chrome extensions that help you open several tabs at once
 
 ### 설치방법(How To Install)
-1. 오른쪽의 Release를 눌러 Assets에서 .zip를 다운받는다. 상단의 Code를 눌러 다운받으면, 작업중인 미완성 버전을 다운받을 수도 있다.
-2. chrome 기반의 브라우저에서 url 창에 [chrome://extensions](chrome://extensions)을 입력한다.
-3. 우측 상단의 "개발자 모드"를 키고 .zip 파일을 압축해제한 후 "압축해제 된 확장 프로그램을 로드합니다."를 눌러 파일을 로드한다.   
-4. 원활한 사용을 위해 크롬을 다시 시작하는 것을 추천한다. 앱을 다운로드 후, 탭에서 새로고침을 해야 정상적으로 작동한다.
+1. _오른쪽의 Release를 눌러 Assets에서 .zip를 다운받는다._ 상단의 Code를 눌러 다운받으면, 작업중인 미완성 버전을 다운받을 수도 있다.
+2. chrome 기반의 브라우저에서 _url 창에 [chrome://extensions](chrome://extensions)을 입력한다._
+3. 우측 상단의 _"개발자 모드"_ 를 키고 .zip 파일을 압축해제한 후 _"압축해제 된 확장 프로그램을 로드합니다."_ 를 눌러 파일을 로드한다.   
+4. _원활한 사용을 위해 크롬을 다시 시작하는 것을 추천한다._ 앱을 다운로드 후, 탭에서 새로고침을 해야 정상적으로 작동한다.
 --- 
-1. Press Release on the right to download .zip from Assets. Otherwise, you may download the incomplete version under development. 
-2. In a chrome-based browser, type [chrome://extensions](chrome://extensions) in the url window.
-3. Turn on "Developer Mode" in the top right corner, decompress the .zip file, and press "Load unpatched extension" to load the file.
-4. It is recommended to restart Chrome for smooth use. After downloading the app, you need to refresh tab to work properly.
+1. _Press Release on the right to download .zip from Assets._ Otherwise, you may download the incomplete version under development. 
+2. In a chrome-based browser, type _[chrome://extensions](chrome://extensions) in the url window._
+3. Turn on _"Developer Mode"_ in the top right corner, decompress the .zip file, and press _"Load unpatched extension"_ to load the file.
+4. _It is recommended to restart Chrome for smooth use._ After downloading the app, you need to refresh tab to work properly.
 
+### 사용방법 (How To Use)
+<img src="https://user-images.githubusercontent.com/54667577/111479411-4b0c8580-8774-11eb-9a9f-734fe516f9a6.png" height="60%" width="60%">
+
+- 확장 프로그램의 icon이나 ctrl+shift+E를 눌러서 팝업을 열 수 있다.
+- open popup by icon or ctrl+shift+E 
+<img src="https://user-images.githubusercontent.com/54667577/111479422-4cd64900-8774-11eb-8e87-e5970face8b6.png">
+
+- 자주쓰는 탭들을 열고, 팝업에서 그림과 같이 입력하여 탭 묶음을 추가할 수 있다. 본인은 mma-fighter-finder를 개발할 때 자주 보던 묶음을 열어 보았다.
+- You can open frequently used tabs and add a bundle of tabs by typing them in the pop-up as shown.
+
+<img src="https://user-images.githubusercontent.com/54667577/111479426-4cd64900-8774-11eb-85ae-f328f8b2ebaa.png" width="50%" height="50%">
+
+- 오타가 나긴 했지만, 정상적으로 추가가 된 모습을 볼 수 있다.
+- You can see that it has been added normally.
+
+<img src="https://user-images.githubusercontent.com/54667577/111479432-4e077600-8774-11eb-948c-a63f2082dba1.png" width="50%" height="50%">
+
+- Detail을 누르면 이런 창이 뜨게 되고, 이 곳에서 항목들의 주소를 관리할 수 있다. 
+- When you click Detail, this window appears, where you can manage the addresses of the items.
+
+<img src="https://user-images.githubusercontent.com/54667577/111479433-4e077600-8774-11eb-94c1-46252b4ce033.png" width="50%" height="50%">
+
+- 성공적으로 ufc url을 지웠다.
+- Successfully erased an url.
+
+
+<details>
+<summary> 버전 별 변경사항 </summary>
+<div markdown="1">
 
 ### v1.0.0
 - 구글 계정과 자동으로 연동
@@ -65,3 +94,6 @@ CRUD available (Create, Read, Update, Delete)
 ### v1.1.3
 - 탭 번들을 삭제하는 부분의 코드 수정
 - code cleanup: tab bundle delete
+
+</div>
+</details>
