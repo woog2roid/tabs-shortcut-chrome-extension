@@ -33,7 +33,7 @@
 - Detail을 누르면 이런 창이 뜨게 되고, 이 곳에서 항목들의 주소를 관리할 수 있다. 
 - When you click Detail, this window appears, where you can manage the addresses of the items.
 
-<img src="https://user-images.githubusercontent.com/54667577/111479433-4e077600-8774-11eb-94c1-46252b4ce033.png" width="50%" height="50%">
+<img src="https://user-images.githubusercontent.com/54667577/113054364-491adb80-91e4-11eb-9375-093e2d47cdf6.png" width="50%" height="50%">
 
 - 성공적으로 ufc url을 지웠다.
 - Successfully erased an url.
