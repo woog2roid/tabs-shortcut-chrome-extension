@@ -3,15 +3,9 @@
 - Chrome extensions that help you open several tabs at once
 
 ### 설치방법(How To Install)
-1. _오른쪽의 Release를 눌러 Assets에서 .zip를 다운받는다._ 상단의 Code를 눌러 다운받으면, 작업중인 미완성 버전을 다운받을 수도 있다.
-2. chrome 기반의 브라우저에서 _url 창에 [chrome://extensions](chrome://extensions)을 입력한다._
-3. 우측 상단의 _"개발자 모드"_ 를 키고 .zip 파일을 압축해제한 후 _"압축해제 된 확장 프로그램을 로드합니다."_ 를 눌러 파일을 로드한다.   
-4. _원활한 사용을 위해 크롬을 다시 시작하는 것을 추천한다._ 앱을 다운로드 후, 탭에서 새로고침을 해야 정상적으로 작동한다.
+- 오른쪽의 구글 크롬 웹스토어 링크를 눌러 설치할 수 있다. 
 --- 
-1. _Press Release on the right to download .zip from Assets._ Otherwise, you may download the incomplete version under development. 
-2. In a chrome-based browser, type _[chrome://extensions](chrome://extensions) in the url window._
-3. Turn on _"Developer Mode"_ in the top right corner, decompress the .zip file, and press _"Load unpatched extension"_ to load the file.
-4. _It is recommended to restart Chrome for smooth use._ After downloading the app, you need to refresh tab to work properly.
+- You can install this application by clicking the Google Chrome Webstore link.
 
 ### 사용방법 (How To Use)
 <img src="https://user-images.githubusercontent.com/54667577/111479411-4b0c8580-8774-11eb-9a9f-734fe516f9a6.png" height="60%" width="60%">
