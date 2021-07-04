@@ -4,7 +4,6 @@
 
 ### 설치방법(How To Install)
 - 오른쪽의 구글 크롬 웹스토어 링크를 눌러 설치할 수 있다. 
---- 
 - You can install this application by clicking the Google Chrome Webstore link.
 
 ### 사용방법 (How To Use)
